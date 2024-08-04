@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anime Details</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Anime Details</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="anime-list.html">Anime List</a>
+        </nav>
+    </header>
+    <main>
+        <section id="animeDetails">
+            <h2 id="animeTitle">Anime Title</h2>
+            <p id="animeDescription">Description goes here.</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Anime World</p>
+    </footer>
+    <script src="script.js"></script>
+    <script>
+        window.watsonAssistantChatOptions = {
+          integrationID: "3bb8a1e6-769e-4994-a9db-a3e114fa35d6", // The ID of this integration.
+          region: "au-syd", // The region your integration is hosted in.
+          serviceInstanceID: "c011e12e-e00c-40e7-a2c0-37487f6a622e", // The ID of your service instance.
+          onLoad: async (instance) => { await instance.render(); }
+        };
+        setTimeout(function(){
+          const t=document.createElement('script');
+          t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+          document.head.appendChild(t);
+        });
+      </script>
+</body>
+</html>
